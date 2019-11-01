@@ -4,12 +4,12 @@ import java.util.Comparator;
 
 import org.testng.annotations.Test;
 
-public class StringMyComparator implements Comparator<Object>{
+public class StringMyComparator implements Comparator<String>{
 
 	@Test
 	@Override
-	public int compare(Object o1, Object o2) {
+	public int compare(String o1, String o2) {
 		
-		return ((String) o1).compareTo((String) o2);
+		return o2.compareTo(o1);
 	}
 }
