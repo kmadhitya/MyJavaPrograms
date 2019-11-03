@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.OptionalInt;
 
 import org.testng.annotations.Test;
 
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class GreatestOfAllNumbers {
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void greatestOfNumsWithList()
 	{
 		int[] arr = {5,4,44,88,56,1000,2,1,0,6};
@@ -28,7 +29,7 @@ public class GreatestOfAllNumbers {
 		System.out.println("Greatest num using list:" +list.get(0));
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void greatestOfNums()
 	{
 		int[] arr = {5,4,44,88,56,1000,2,1,0,6};
