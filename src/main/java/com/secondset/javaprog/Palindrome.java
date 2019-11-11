@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Palindrome {
+import org.testng.annotations.Test;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public class Palindrome {
+	@Test(enabled=false)
+	public void palindrome1() {
 		String txt = "level";
 		String txt1 ="";
 		
@@ -29,8 +30,14 @@ public class Palindrome {
 			{
 				System.out.println("Not a palindrome");
 			}
-			
+	}
+	@Test(enabled=false)
+	public void palindrome2() {
 			System.out.print("Using List: ");
+			String txt = "level";
+			String txt1 ="";
+			
+			char[] ch = txt.toCharArray();
 			List<Character> list1 = new ArrayList<Character>();
 			List<Character> list2 = new ArrayList<Character>();
 			for (char eachChar : ch)
@@ -59,7 +66,14 @@ public class Palindrome {
 			{
 				System.out.println(txt+" is not a palindrome");
 			}
+	}
+	@Test(enabled=false)
+	public void palindrome3() {
 			System.out.print("Using String Builder: ");
+			String txt = "level";
+			String txt1 ="";
+			
+			char[] ch = txt.toCharArray();
 			StringBuilder sb1 = new StringBuilder();
 			for (char eachChr : ch)
 			{
@@ -76,7 +90,5 @@ public class Palindrome {
 			{
 				System.out.println(txt+" is not a palindrome");
 			}
-
-	}
-
+			}
 }

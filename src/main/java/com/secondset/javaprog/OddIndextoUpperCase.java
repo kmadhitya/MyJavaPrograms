@@ -1,10 +1,17 @@
 package com.secondset.javaprog;
 
+import java.util.LinkedList;
+import java.util.List;
+
+import org.testng.annotations.Test;
+
 public class OddIndextoUpperCase {
 
-	public static void main(String[] args) {
+	@Test(enabled=false)
+	public void oddToUpperSB() {
 		String name = "changename";
 		char[] chr = name.toCharArray();
+		
 		StringBuilder sb1 = new StringBuilder();
 		StringBuilder sb2 = new StringBuilder();
 		StringBuilder sb3 = new StringBuilder();
@@ -33,6 +40,30 @@ public class OddIndextoUpperCase {
 			sb3.append(charArray2[j]);
 		}
 		System.out.println(sb3);
+	}
+	@Test(enabled=true)
+	public void oddToUpper() {
+		String name = "changename";
+		char[] chr = name.toCharArray();
+		
+		List<Character> list1 = new LinkedList<Character>();
+		for(char eachChar : chr)
+		{
+			list1.add(eachChar);
+		}
+		for(int i=0; i<list1.size(); i++)
+		{
+			if (i%2==0)
+			{
+				System.out.print(list1.get(i));
+			}
+			else
+			{
+				System.out.print(list1.get(i).toString().toUpperCase());
+			}
+		}
+		System.out.println();
+		
 	}
 
 }

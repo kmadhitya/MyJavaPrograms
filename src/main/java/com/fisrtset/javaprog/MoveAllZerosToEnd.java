@@ -36,7 +36,26 @@ public class MoveAllZerosToEnd {
 		System.out.println(list2);
 	}
 	
-	@Test
+	@Test(enabled=true)
+	public void movingZerosToEndThruList() {		
+		int[] data = {0,2,1,0,7,7,0,3};
+		List<Integer> list1 = new LinkedList<Integer>();
+		
+		for (int eachInt : data)
+		{
+			if (eachInt!=0)
+			list1.add(eachInt);
+		}
+		for (int eachInt : data)
+		{
+			if (eachInt==0)
+				list1.add(eachInt);
+		}
+		System.out.println(list1);
+		
+	}
+	
+	@Test(enabled=false)
 	public void movingZerosToEnd()
 	{
 		int[] data = {0,2,1,0,7,7,0,3};

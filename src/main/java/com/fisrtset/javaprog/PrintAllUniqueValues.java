@@ -2,6 +2,7 @@ package com.fisrtset.javaprog;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -42,8 +43,8 @@ public class PrintAllUniqueValues {
 	public static void printUniqueValuesUsingList(String text)
 	{
 		char[] charArray = text.toCharArray();
-		List<Character> list = new ArrayList<Character>();
-		List<Character> list2 = new ArrayList<Character>();
+		List<Character> list = new LinkedList<Character>();
+		List<Character> list2 = new LinkedList<Character>();
 		for (char eachChar : charArray)
 		{
 		list.add(eachChar);

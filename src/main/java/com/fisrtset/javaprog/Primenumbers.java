@@ -71,14 +71,14 @@ public class Primenumbers {
 		@Test(enabled=true)
 		public void practicePrimeNumberOrNot() 
 		{
-			int number = 17;
+			int number = 1;
 			int count = 0;
 			for (int i=1; i<=number; i++)
 			{
 				
 				if(number%i==0)
 				{
-					++count;
+					count++;
 				}
 			}
 			if (count==2)

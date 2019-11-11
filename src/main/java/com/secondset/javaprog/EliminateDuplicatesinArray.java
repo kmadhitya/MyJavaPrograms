@@ -1,25 +1,58 @@
 package com.secondset.javaprog;
+
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.TreeSet;
+
+import org.testng.annotations.Test;
+
 public class EliminateDuplicatesinArray {
-	public static void main(String[] args) {
-		int[] arr={1,2,1,22,23,34,44,33,34,22,34};
-		int[] dups = new int[12];
-		int[] uniq = new int[12];
+	@Test(enabled=false)
+	public void eliminateDupsInSortedArray() {
+		int[] arr={1,2,2,3,4,4,4,5,5};
+		int[] temp = new int[arr.length];
+		int j=0;
 		for (int i=0; i<arr.length-1; i++)
-		{	//System.out.println("I: "+arr[i]);
-			for (int k = i+1; k < arr.length; k++) {
-				//System.out.println("K: "+arr[k]);
-				if(arr[i]==arr[k])
-				{	//int j=0;
-					System.out.println("duplicates are: "+arr[i]);
-					break;
-					//j++; //dups = new int[k];
-				}
-				else
-				{System.out.println("not duplicates: "+arr[i]);}
-			}	
-		}/*for(int arrayElement:dups)
-		{System.out.println("duplicates are: "+arrayElement);}
-		/*for (int duplicates : dups) {System.out.println(duplicates);}
-		for (int unique : uniq) {System.out.println(unique);}*/
+				if(arr[i]!=arr[i+1])				
+					arr[j++]=arr[i];					
+				
+				arr[j++]=arr[arr.length-1];
+		for (int i=0;i<j;i++)
+		{
+		System.out.println(arr[i]);
+		}
 	}
+	@Test(enabled=false)
+	public void eliminateDupsInUSortedArraySet()
+	{
+		int[] arr={1,2,66,2,3,4,55,4,4,5,55,5,1};
+		Set<Integer> s = new LinkedHashSet<Integer>();
+		for(int eachArr : arr)
+		{
+			s.add(eachArr);
+		}
+		System.out.println(s);
+	}
+	@Test(enabled=true)
+	public void eliminateDupsInUSortedArrayMap()
+	{
+		int[] arr={1,2,66,2,3,4,55,4,4,5,55,5,1};
+		Map<Integer,Integer> m = new LinkedHashMap<Integer,Integer>();
+		for(int eachArr : arr)
+		{
+			if (m.containsKey(eachArr)!=true)
+			{
+				m.put(eachArr, 1);
+			}
+		}
+		for(Entry<Integer,Integer> eachMap : m.entrySet())
+		{
+			System.out.print(eachMap.getKey()+" ");
+		}
+	}
+	
 }
